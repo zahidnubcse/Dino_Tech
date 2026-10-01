@@ -5,7 +5,7 @@ import partner from "../assets/Logo_Partner.png";
 const Partner = () => {
   return (
     <div>
-      <div className="flex items-center justify-center bg-gray-200 py-8">
+      <div className="flex items-center justify-center bg-gray-200 py-16">
         <img
           src={partner}
           alt="partner"
