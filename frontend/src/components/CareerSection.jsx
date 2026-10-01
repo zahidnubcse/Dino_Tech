@@ -1,18 +1,16 @@
 import React from "react";
 
-import person1 from "../assets/Image (1).png";
-
 const courses = [
   {
-    title: "Full Stack Web Development",
+    title: "UI/UX Design Masterclass",
     instructor: "purepearl studio",
     image:
-      "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=900&q=80",
-    rating: "4.8",
-    lessons: "32 Lessons",
-    duration: "4h 20m",
-    level: "Intermediate",
-    price: "$35",
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80",
+    rating: "4.9",
+    lessons: "28 Lessons",
+    duration: "3h 45m",
+    level: "Beginner",
+    price: "$29",
   },
 ];
 
@@ -20,8 +18,8 @@ function CourseCard() {
   const course = courses[0];
 
   return (
-    <div className="w-[440px] max-w-[calc(100vw-40px)] overflow-hidden rounded-[26px] border border-gray-200 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.07)]">
-      <div className="relative h-[230px] p-4">
+    <div className="w-[420px] max-w-[calc(100vw-40px)] overflow-hidden rounded-[26px] border border-gray-200 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.07)]">
+      <div className="relative h-[220px] p-4">
         <img
           src={course.image}
           alt={course.title}
@@ -40,7 +38,7 @@ function CourseCard() {
       </div>
 
       <div className="px-5 pb-5">
-        <h3 className="text-[24px] font-semibold leading-[1.2] text-[#111111]">
+        <h3 className="text-[23px] font-semibold leading-[1.2] text-[#111111]">
           {course.title}
         </h3>
 
@@ -79,17 +77,17 @@ function CourseCard() {
 
 function ProgressCard() {
   return (
-    <div className="w-[275px] rounded-[23px] bg-white px-6 py-5 shadow-[0_15px_45px_rgba(0,0,0,0.08)]">
+    <div className="w-[235px] rounded-[23px] bg-white px-6 py-5 shadow-[0_15px_45px_rgba(0,0,0,0.08)]">
       <p className="text-[15px] font-medium text-gray-700">
-        Learning Progress
+        Course Progress
       </p>
 
-      <p className="mt-3 text-[55px] font-semibold leading-none tracking-[-2px] text-[#202124]">
-        55%
+      <p className="mt-3 text-[50px] font-semibold leading-none tracking-[-2px] text-[#202124]">
+        72%
       </p>
 
       <div className="mt-5 h-[9px] overflow-hidden rounded-full bg-[#eeeeee]">
-        <div className="h-full w-[55%] rounded-full bg-[#b9f500]" />
+        <div className="h-full w-[72%] rounded-full bg-[#b9f500]" />
       </div>
     </div>
   );
@@ -97,21 +95,21 @@ function ProgressCard() {
 
 function LimeDecoration() {
   return (
-    <div className="absolute right-[-10px] top-[85px] z-20 h-[190px] w-[135px] rotate-[8deg]">
-      <span className="absolute left-3 top-0 h-[31px] w-[88px] rotate-[-8deg] rounded-full bg-[#baff00]" />
+    <div className="absolute left-[-5px] top-[75px] z-20 h-[175px] w-[120px] rotate-[-8deg]">
+      <span className="absolute left-3 top-0 h-[28px] w-[80px] rotate-[8deg] rounded-full bg-[#baff00]" />
 
-      <span className="absolute left-[-3px] top-[34px] h-[32px] w-[112px] rotate-[-12deg] rounded-full bg-[#baff00]" />
+      <span className="absolute left-[-2px] top-[32px] h-[29px] w-[103px] rotate-[12deg] rounded-full bg-[#baff00]" />
 
-      <span className="absolute left-0 top-[70px] h-[32px] w-[120px] rotate-[-12deg] rounded-full bg-[#baff00]" />
+      <span className="absolute left-0 top-[65px] h-[29px] w-[110px] rotate-[12deg] rounded-full bg-[#baff00]" />
 
-      <span className="absolute left-[13px] top-[108px] h-[32px] w-[105px] rotate-[-10deg] rounded-full bg-[#baff00]" />
+      <span className="absolute left-[12px] top-[99px] h-[29px] w-[97px] rotate-[10deg] rounded-full bg-[#baff00]" />
 
-      <span className="absolute left-[26px] top-[145px] h-[31px] w-[75px] rotate-[-8deg] rounded-full bg-[#baff00]" />
+      <span className="absolute left-[24px] top-[133px] h-[28px] w-[70px] rotate-[8deg] rounded-full bg-[#baff00]" />
     </div>
   );
 }
 
-function App() {
+function CareerSection() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#fafaf8]">
       {/* Background */}
@@ -125,7 +123,7 @@ function App() {
         />
 
         <div
-          className="absolute -bottom-[330px] -left-[230px] h-[750px] w-[850px]"
+          className="absolute -bottom-[330px] -right-[230px] h-[750px] w-[850px]"
           style={{
             background:
               "radial-gradient(circle, rgba(190,205,255,0.48) 0%, rgba(210,220,250,0.25) 38%, rgba(220,225,250,0) 72%)",
@@ -151,37 +149,65 @@ function App() {
 
       {/* Main */}
       <section className="relative mx-auto flex min-h-screen max-w-[1800px] items-center px-6 py-14 sm:px-10 lg:px-[8%]">
-        <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-4">
-          {/* Left */}
-          <div className="relative z-10 max-w-[680px]">
+        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+
+          {/* Left - Visual */}
+          <div className="relative order-2 mx-auto h-[570px] w-full max-w-[700px] sm:h-[630px] lg:order-1 lg:h-[680px]">
+
+            {/* Course Card */}
+            <div className="absolute left-[0%] top-[5%] z-10 sm:left-[4%] lg:left-[6%]">
+              <CourseCard />
+            </div>
+
+            {/* Woman */}
+            <div className="absolute bottom-[-5px] left-[16%] z-30 sm:left-[21%] lg:left-[24%]">
+              <img
+                src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTEwL3Jhd3BpeGVsb2ZmaWNlMTJfcGhvdG9fb2ZfZnVsbF9sZW5ndGhfb2Zfc21pbGluZ19ibGFja19idXNpbmVzc19iNzQwMTA2Zi0zZjUyLTQxOTItYjBkZi01NDU4MzAzZDMxMjQucG5n.png"
+                alt="Woman holding laptop"
+                className="h-[360px] w-auto object-contain sm:h-[420px] lg:h-[470px]"
+              />
+            </div>
+
+            {/* Progress */}
+            <div className="absolute right-[0%] top-[44%] z-40 sm:right-[2%] lg:right-[4%]">
+              <ProgressCard />
+            </div>
+
+            <LimeDecoration />
+          </div>
+
+          {/* Right - Text */}
+          <div className="relative z-10 order-1 max-w-[680px] lg:order-2 lg:pl-6">
+
             <h1 className="text-[42px] font-bold leading-[1.08] tracking-[-1.8px] text-[#202124] sm:text-[50px] lg:text-[56px]">
-              Your Path to Professional
+              Learn New Skills,
               <br />
-              Growth Starts Here!
+              Build Your Future!
             </h1>
 
             <p className="mt-10 max-w-[620px] text-[17px] leading-[1.7] text-[#5d6066] sm:text-[19px] lg:text-[20px]">
-              Explore our curated selection of courses tailored to enhance
-              your capabilities and accelerate your career journey. Whether
-              you are looking to sharpen specific skills, gain industry
-              expertise, or embark on a new career path entirely, we have the
-              resources you need.
+              Learn from industry experts and discover practical skills that
+              can transform your career. From design and technology to
+              business and creativity, find everything you need to move
+              forward with confidence.
             </p>
 
-            <div className="mt-11 flex flex-wrap gap-x-14 gap-y-8 sm:gap-x-16">
+            {/* Stats */}
+            <div className="mt-11 flex flex-wrap gap-x-12 gap-y-8 sm:gap-x-16">
+
               <div>
                 <div className="text-[38px] font-semibold leading-none tracking-[-1px] text-[#1247d9] sm:text-[42px]">
-                  12K
+                  15K
                 </div>
 
                 <div className="mt-3 text-[17px] text-[#5d6066]">
-                  Students
+                  Learners
                 </div>
               </div>
 
               <div>
                 <div className="text-[38px] font-semibold leading-none tracking-[-1px] text-[#1247d9] sm:text-[42px]">
-                  70+
+                  85+
                 </div>
 
                 <div className="mt-3 text-[17px] text-[#5d6066]">
@@ -191,38 +217,15 @@ function App() {
 
               <div>
                 <div className="text-[38px] font-semibold leading-none tracking-[-1px] text-[#1247d9] sm:text-[42px]">
-                  16
+                  24
                 </div>
 
                 <div className="mt-3 text-[17px] text-[#5d6066]">
-                  Creators
+                  Instructors
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Right */}
-          <div className="relative mx-auto h-[570px] w-full max-w-[720px] sm:h-[630px] lg:h-[680px]">
-            {/* Card stays behind */}
-            <div className="absolute left-[0%] top-[2%] z-10 sm:left-[2%]">
-              <CourseCard />
             </div>
-
-            {/* Person comes in front */}
-            <div className="absolute bottom-[-15px] right-[8%] z-30 sm:right-[12%] lg:right-[15%]">
-              <img
-                src={person1}
-                alt="Student using a laptop"
-                className="h-[470px] w-auto object-contain sm:h-[560px] lg:h-[620px]"
-              />
-            </div>
-
-            {/* Progress */}
-            <div className="absolute right-[-1%] top-[42%] z-40 sm:right-[0%]">
-              <ProgressCard />
-            </div>
-
-            <LimeDecoration />
           </div>
         </div>
       </section>
@@ -230,4 +233,4 @@ function App() {
   );
 }
 
-export default App;
+export default CareerSection;

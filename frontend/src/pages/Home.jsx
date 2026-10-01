@@ -6,6 +6,7 @@ import CourseCards from '../components/CourseCard'
 import LearningPath from '../components/LearningPath'
 import Testimonials from '../components/Testimonial'
 import ProfessionalGrowthSection from '../components/ProfessionalGrowthSection'
+import CareerSection from '../components/CareerSection'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <CourseCards/>
       <LearningPath/>
          <ProfessionalGrowthSection/>
+         <CareerSection/>
       <Testimonials/>
     </div>
   )
